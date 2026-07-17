@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>說明 - 加班申報方式</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 28px;
+            text-align: center;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            border-left: 5px solid #0056b3;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+        .qa-section {
+            background-color: #f1f3f5;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .qa-item {
+            margin-bottom: 20px;
+        }
+        .qa-item:last-child {
+            margin-bottom: 0;
+        }
+        .question {
+            font-weight: bold;
+            color: #d9534f;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .answer {
+            color: #2c3e50;
+            padding-left: 15px;
+            border-left: 2px solid #ced4da;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #e9ecef;
+            color: #495057;
+            font-weight: bold;
+        }
+        .highlight-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            color: #856404;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .steps-list {
+            padding-left: 20px;
+        }
+        .steps-list li {
+            margin-bottom: 10px;
+        }
+        .sys-path {
+            background-color: #e2e3e5;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 14px;
+            color: #383d41;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
 
+<div class="container">
+    <h1>醫師加班申報說明</h1>
+
+    <!-- Q&A Section -->
+    <h2>常見問答 (Q&A)</h2>
+    <div class="qa-section">
+        <div class="qa-item">
+            <div class="question">Q1: 當日有班，因公提早到班有刷卡，下班後還需要刷卡？</div>
+            <div class="answer">A: 不用[cite: 1]。</div>
+        </div>
+        <div class="qa-item">
+            <div class="question">Q2: 續上題，那因公延遲下班，要刷嗎？</div>
+            <div class="answer">A: 要[cite: 1]。</div>
+        </div>
+        <div class="qa-item">
+            <div class="question">Q3: 何時要入臨時加班，何時要入假日加班？</div>
+            <div class="answer">
+                1. 因急診為輪班部門，有排班的日子算平日，故因公提早或延遲下班，均為加班代號2<strong>【臨時加班】</strong>[cite: 1]。<br>
+                2. 未排班的日子為假日，故出勤即為加班代號1<strong>【假日加班】</strong>[cite: 1]。
+            </div>
+        </div>
+        <div class="qa-item">
+            <div class="question">Q4: 臨時及假日加班的時數上限為何？</div>
+            <div class="answer">
+                平日加班每日最多 4 小時（可自報說明如下表）；假日加班每日最多 8 小時[cite: 1]。
+                <table>
+                    <thead>
+                        <tr>
+                            <th>加班類型</th>
+                            <th>急診值班情況</th>
+                            <th>可自報上限（小時）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2"><strong>臨時加班</strong>[cite: 1]</td>
+                            <td>報班 10 小時班，自動報 2 小時加班[cite: 1]</td>
+                            <td>2[cite: 1]</td>
+                        </tr>
+                        <tr>
+                            <td>報班 12 小時班，自動報 4 小時加班[cite: 1]</td>
+                            <td>0[cite: 1]</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="qa-item">
+            <div class="question">Q5: 跨院區刷卡資料未顯示？</div>
+            <div class="answer">A: 已反應，程式修正中。請先自行輸入[cite: 1]。</div>
+        </div>
+    </div>
+
+    <!-- System Navigation -->
+    <h2>系統操作路徑</h2>
+    <div class="sys-path">
+        長庚HIS → 全院性作業 → 醫師相關作業 → 主治醫師加班資料[cite: 1]
+    </div>
+
+    <!-- Operation Steps -->
+    <h2>申報步驟指引</h2>
+    <ol class="steps-list">
+        <li>進入系統後，選擇對應的考勤月份、院區及部門[cite: 1]。</li>
+        <li>點選<strong>「加班日期」</strong>並挑選加班起迄日期與起迄時間[cite: 1]。</li>
+        <li>選擇<strong>「加班代號」</strong>（例如：1.假日加班 或 2.臨時加班）[cite: 1]。</li>
+        <li>選擇<strong>「原因」</strong>（如：門診逾時、夜診逾時、查房、開刀逾時、處理病患病情、教育訓練、醫療會議等），若選「其他」請於內容欄詳細說明理由[cite: 1]。</li>
+        <li>輸入完成後按<strong>「新增」</strong>[cite: 1]。</li>
+        <li><strong>確認申報：</strong>資料列表必須成功顯示出您的名字，才算完成申報流程[cite: 1]。</li>
+    </ol>
+
+    <!-- Important Notice -->
+    <div class="highlight-box">
+        ※ 申請假日加班者，請根據加班實際刷卡記錄，以 HIS 加班系統新增加班記錄後，依申報流程進行核簽[cite: 1]。<br>
+        ※ 臨時加班 + 假日加班，每月總上限為 36 小時[cite: 1]。
+    </div>
+</div>
+
+</body>
+</html>
