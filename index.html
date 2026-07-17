@@ -34,7 +34,6 @@
   }
   a{color:inherit;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
-  /* ---------- NAV ---------- */
   header.nav{
     position:sticky;top:0;z-index:50;
     background:rgba(246,241,228,0.88);
@@ -61,10 +60,8 @@
   nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--pulse);transition:width .25s;}
   nav.links a:hover::after{width:100%;}
   @media (max-width:760px){ nav.links{display:none;} }
-  /* ---------- ECG DIVIDER ---------- */
   .ecg{width:100%;display:block;height:56px;}
   .ecg path{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;}
-  /* ---------- HERO ---------- */
   .hero{padding:86px 0 10px;}
   .eyebrow{
     font-family:var(--mono);font-size:0.75rem;letter-spacing:0.14em;
@@ -91,7 +88,6 @@
     margin-top:44px;font-family:var(--mono);font-size:0.72rem;color:rgba(24,39,34,0.45);
     display:flex;flex-wrap:wrap;gap:22px;border-top:1px dashed var(--line);padding-top:16px;
   }
-  /* ---------- SECTION SHELL ---------- */
   section.card-section{padding:66px 0 62px;}
   section.card-section.alt{background:var(--paper-2);}
   section.card-section.acls{background:#EFE2DC;border-top:1px solid rgba(166,58,46,0.25);border-bottom:1px solid rgba(166,58,46,0.25);}
@@ -126,7 +122,6 @@
   .cta.pulse:hover{background:transparent;color:var(--pulse);}
   .cta .arrow{transition:transform .25s;}
   .cta:hover .arrow{transform:translateX(4px);}
-  /* side sample cards */
   .sample{
     border:1px solid var(--line);background:rgba(255,255,255,0.55);
     border-radius:4px;padding:22px 22px 20px;
@@ -146,7 +141,6 @@
   .cred-grid dt{font-family:var(--mono);font-size:0.68rem;opacity:0.5;margin-bottom:2px;}
   .cred-grid dd{margin:0;}
   @media (max-width:520px){ .cred-grid{grid-template-columns:1fr;} }
-  /* ---------- FOOTER ---------- */
   footer{
     background:var(--ink);color:var(--paper);padding:56px 0 30px;
   }
@@ -444,6 +438,10 @@
           <li>忘刷卡當日應於期限內申請補登</li>
           <li>跨夜 / 假日加班的計算方式是否清楚</li>
         </ul>
+        <div class="sub-links">
+          <a href="https://d8600010-gmail.github.io/JimmyWholePage/OvertimeChockIn/OverTimeFlow.html" target="_blank" rel="noopener">加班申報刷卡流程圖 ↗</a>
+          <a href="https://d8600010-gmail.github.io/JimmyWholePage/OvertimeChockIn/OverTimeRule.html" target="_blank" rel="noopener">常見問答 Q&amp;A ↗</a>
+        </div>
       </div>
     </div>
   </div>
@@ -478,13 +476,13 @@
       <div class="foot-col">
         <h5>05 加班</h5>
         <a href="https://d8600010-gmail.github.io/JimmyWholePage/OvertimeChockIn/OverTimeRule.html" target="_blank" rel="noopener">加班刷卡原則 ↗</a>
+        <a href="https://d8600010-gmail.github.io/JimmyWholePage/OvertimeChockIn/OverTimeFlow.html" target="_blank" rel="noopener">刷卡流程圖 ↗</a>
       </div>
     </div>
     <div class="fine">© 2026 Dr. Jimmy Chen · Integrated Portal · Content for medical education purposes only</div>
   </div>
 </footer>
 <script>
-// generate an ECG-style waveform path across arbitrary width
 function ecgPath(width, height, beats){
   const midY = height/2;
   const beatW = width / beats;
@@ -492,17 +490,16 @@ function ecgPath(width, height, beats){
   for(let i=0;i<beats;i++){
     const x0 = i*beatW;
     d += ` L${x0+beatW*0.12},${midY}`;
-    d += ` L${x0+beatW*0.18},${midY-height*0.12} L${x0+beatW*0.24},${midY}`; // P wave
+    d += ` L${x0+beatW*0.18},${midY-height*0.12} L${x0+beatW*0.24},${midY}`;
     d += ` L${x0+beatW*0.34},${midY}`;
-    d += ` L${x0+beatW*0.37},${midY+height*0.10} L${x0+beatW*0.40},${midY-height*0.85} L${x0+beatW*0.43},${midY+height*0.5} L${x0+beatW*0.46},${midY}`; // QRS
+    d += ` L${x0+beatW*0.37},${midY+height*0.10} L${x0+beatW*0.40},${midY-height*0.85} L${x0+beatW*0.43},${midY+height*0.5} L${x0+beatW*0.46},${midY}`;
     d += ` L${x0+beatW*0.60},${midY}`;
-    d += ` L${x0+beatW*0.68},${midY-height*0.22} L${x0+beatW*0.78},${midY}`; // T wave
+    d += ` L${x0+beatW*0.68},${midY-height*0.22} L${x0+beatW*0.78},${midY}`;
     d += ` L${x0+beatW},${midY}`;
   }
   return d;
 }
 document.querySelectorAll('.ecg path').forEach(function(path, idx){
-  const svg = path.closest('svg');
   const beatsCount = 6;
   const d = ecgPath(1200, 56, beatsCount);
   path.setAttribute('d', d);
@@ -514,7 +511,6 @@ document.querySelectorAll('.ecg path').forEach(function(path, idx){
     {duration: 2600, easing:'ease-out', fill:'forwards', delay: idx*80}
   );
 });
-// reveal sections on scroll
 const obs = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
