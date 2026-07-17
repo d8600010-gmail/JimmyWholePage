@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -44,7 +43,7 @@
         .container {
             padding: 30px 25px;
         }
-        
+
         /* 流程表格樣式 */
         .flow-table {
             width: 100%;
@@ -54,7 +53,7 @@
             padding: 0;
             vertical-align: top;
         }
-        
+
         /* 步驟數字圖示 */
         .step-num {
             width: 50px;
@@ -69,7 +68,7 @@
             border-radius: 50%;
             margin: 0 auto;
         }
-        
+
         /* 箭頭樣式 */
         .step-arrow {
             text-align: center;
@@ -78,7 +77,7 @@
             padding: 10px 0;
             line-height: 1;
         }
-        
+
         /* 步驟卡片樣式 */
         .card {
             background: #ffffff;
@@ -99,7 +98,24 @@
             font-size: 14.5px;
             color: #4a5568;
         }
-        
+
+        /* 圖片區塊 */
+        .fig-box {
+            margin-top: 14px;
+            text-align: center;
+        }
+        .fig-box img {
+            max-width: 100%;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+        .fig-caption {
+            margin-top: 6px;
+            font-size: 12.5px;
+            color: #718096;
+        }
+
         /* 分流彈性版面 (傳統表格達成，相容性高) */
         .grid-table {
             width: 100%;
@@ -111,7 +127,7 @@
             padding: 0 8px;
             vertical-align: top;
         }
-        
+
         .inner-box {
             background-color: #f8fafc;
             border: 1px dashed #cbd5e0;
@@ -123,7 +139,7 @@
             color: #1a202c;
             font-size: 14.5px;
         }
-        
+
         /* 子條件表格 */
         .sub-table {
             width: 100%;
@@ -141,7 +157,7 @@
             color: #2d3748;
             font-weight: bold;
         }
-        
+
         /* 注意事項區塊 */
         .notice-box {
             background-color: #fffaf0;
@@ -171,13 +187,11 @@
     </style>
 </head>
 <body>
-
 <div class="wrapper">
     <div class="header">
         <h1>長庚醫療資訊系統 (HIS)</h1>
         <p>主治醫師加班申報標準作業流程表 (含急診值班分支判定)</p>
     </div>
-
     <div class="container">
         <table class="flow-table">
             <!-- 步驟 1 -->
@@ -189,8 +203,12 @@
                     <div class="card">
                         <div class="card-title">系統導航與基本條件填寫</div>
                         <div class="card-content">
-                            登入系統後點選：<strong>全院性作業 → 醫師相關作業 → 主治醫師加班資料</strong>[cite: 1]。<br>
-                            確實填寫或挑選：<strong>考勤月份</strong>、<strong>院區（3林口）</strong>及<strong>部門（33W00 急診醫學科）</strong>[cite: 1]。
+                            登入系統後點選：<strong>全院性作業 → 醫師相關作業 → 主治醫師加班資料</strong>。<br>
+                            確實填寫或挑選：<strong>考勤月份</strong>、<strong>院區（3林口）</strong>及<strong>部門（33W00 急診醫學科）</strong>。
+                            <div class="fig-box">
+                                <img src="Figure/圖1.png" alt="步驟1系統導航畫面">
+                                <div class="fig-caption">圖1：系統導航與基本條件填寫畫面</div>
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -199,7 +217,7 @@
                 <td><div class="step-arrow">↓</div></td>
                 <td></td>
             </tr>
-            
+
             <!-- 步驟 2 -->
             <tr>
                 <td>
@@ -215,19 +233,23 @@
                                     <td style="padding-left:0;">
                                         <div class="inner-box" style="border-left: 3px solid #3182ce; background-color: #f0f4f8;">
                                             <strong>當日有排班 (平日狀況)</strong><br>
-                                            因公提早到班或延遲下班出勤[cite: 1]。<br>
-                                            ➔ 選擇 <strong>【代號 2：臨時加班】</strong>[cite: 1]
+                                            因公提早到班或延遲下班出勤。<br>
+                                            ➔ 選擇 <strong>【代號 2：臨時加班】</strong>
                                         </div>
                                     </td>
                                     <td style="padding-right:0;">
                                         <div class="inner-box" style="border-left: 3px solid #38a169; background-color: #f0f7f4;">
                                             <strong>當日未排班 (例假日狀況)</strong><br>
-                                            於未排班之例假日因公到院出勤[cite: 1]。<br>
-                                            ➔ 選擇 <strong>【代號 1：假日加班】</strong>[cite: 1]
+                                            於未排班之例假日因公到院出勤。<br>
+                                            ➔ 選擇 <strong>【代號 1：假日加班】</strong>
                                         </div>
                                     </td>
                                 </tr>
                             </table>
+                            <div class="fig-box">
+                                <img src="Figure/圖2.png" alt="步驟2加班類別判定畫面">
+                                <div class="fig-caption">圖2：加班類別（代號1/代號2）選擇畫面</div>
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -236,7 +258,7 @@
                 <td><div class="step-arrow">↓</div></td>
                 <td></td>
             </tr>
-            
+
             <!-- 步驟 3 -->
             <tr>
                 <td>
@@ -246,13 +268,13 @@
                     <div class="card">
                         <div class="card-title">第二層判定：依據「急診值班情況」確認可申報時數上限</div>
                         <div class="card-content">
-                            進入時數上限判定。<strong>假日加班時數上限固定為 8 小時</strong>[cite: 1]。若屬於<strong>【臨時加班】</strong>，則須細分以下出勤情況：
-                            
+                            進入時數上限判定。<strong>假日加班時數上限固定為 8 小時</strong>。若屬於<strong>【臨時加班】</strong>，則須細分以下出勤情況：
+
                             <table class="grid-table">
                                 <tr>
                                     <td style="padding-left:0;">
                                         <div class="inner-box" style="border-left: 3px solid #e53e3e; background-color: #fff5f5;">
-                                            <strong>情況 A：當日有上急診值班</strong>[cite: 1]<br>
+                                            <strong>情況 A：當日有上急診值班</strong><br>
                                             依據報班的班別時數，系統會自動處理部分加班，其餘可自報上限如下：
                                             <table class="sub-table">
                                                 <thead>
@@ -264,14 +286,14 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td><strong>10小時班</strong>[cite: 1]</td>
-                                                        <td>2 小時[cite: 1]</td>
-                                                        <td><strong style="color:#e53e3e;">2 小時</strong>[cite: 1]</td>
+                                                        <td><strong>10小時班</strong></td>
+                                                        <td>2 小時</td>
+                                                        <td><strong style="color:#e53e3e;">2 小時</strong></td>
                                                     </tr>
                                                     <tr>
-                                                        <td><strong>12小時班</strong>[cite: 1]</td>
-                                                        <td>4 小時[cite: 1]</td>
-                                                        <td><strong style="color:#718096;">0 小時</strong>[cite: 1]</td>
+                                                        <td><strong>12小時班</strong></td>
+                                                        <td>4 小時</td>
+                                                        <td><strong style="color:#718096;">0 小時</strong></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -282,11 +304,15 @@
                                             <strong>情況 B：當日無上急診值班</strong><br>
                                             （適用一般常規看診、教學研究或日常醫療行政業務）<br><br>
                                             <strong>常規平日加班時數上限：</strong><br>
-                                            每日最多可自報 <strong>4 小時</strong>[cite: 1]。
+                                            每日最多可自報 <strong>4 小時</strong>。
                                         </div>
                                     </td>
                                 </tr>
                             </table>
+                            <div class="fig-box">
+                                <img src="Figure/圖3.png" alt="步驟3時數上限判定畫面">
+                                <div class="fig-caption">圖3：急診值班班別與可自報時數上限對照畫面</div>
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -295,7 +321,7 @@
                 <td><div class="step-arrow">↓</div></td>
                 <td></td>
             </tr>
-            
+
             <!-- 步驟 4 -->
             <tr>
                 <td>
@@ -305,9 +331,13 @@
                     <div class="card">
                         <div class="card-title">輸入時間、挑選原因與內容敘述</div>
                         <div class="card-content">
-                            1. 點選並挑選具體的<strong>加班起訖日期及起訖時間</strong>[cite: 1]。<br>
-                            2. 選擇<strong>加班原因</strong>（如：門診逾時、夜診逾時、查房、開刀逾時、處理病患病情、教育訓練、醫療會議、急救等）[cite: 1]。<br>
-                            <span style="color: #c53030; font-weight: bold;">※ 關鍵注意：若原因選擇「其他」，請務必於「內容」欄位中詳細說明具體醫療理由[cite: 1]。</span>
+                            1. 點選並挑選具體的<strong>加班起訖日期及起訖時間</strong>。<br>
+                            2. 選擇<strong>加班原因</strong>（如：門診逾時、夜診逾時、查房、開刀逾時、處理病患病情、教育訓練、醫療會議、急救等）。<br>
+                            <span style="color: #c53030; font-weight: bold;">※ 關鍵注意：若原因選擇「其他」，請務必於「內容」欄位中詳細說明具體醫療理由。</span>
+                            <div class="fig-box">
+                                <img src="Figure/圖4.png" alt="步驟4時間與原因輸入畫面">
+                                <div class="fig-caption">圖4：加班時間輸入與原因選擇畫面</div>
+                            </div>
                         </div>
                     </div>
                 </td>
@@ -316,7 +346,7 @@
                 <td><div class="step-arrow">↓</div></td>
                 <td></td>
             </tr>
-            
+
             <!-- 步驟 5 -->
             <tr>
                 <td>
@@ -326,209 +356,31 @@
                     <div class="card">
                         <div class="card-title">新增儲存並確認完成</div>
                         <div class="card-content">
-                            核對資料無誤後點選<strong>「新增」</strong>按鈕[cite: 1]。<br>
-                            儲存後，請務必滾動檢視下方資料列表，<strong>確認必須成功顯示出您的「醫師姓名」與該筆申報時數</strong>，才算系統新增端完成，後續方可依流程核簽[cite: 1]。
+                            核對資料無誤後點選<strong>「新增」</strong>按鈕。<br>
+                            儲存後，請務必滾動檢視下方資料列表，<strong>確認必須成功顯示出您的「醫師姓名」與該筆申報時數</strong>，才算系統新增端完成，後續方可依流程核簽。
+                            <div class="fig-box">
+                                <img src="Figure/圖5_已遮名.png" alt="步驟5新增確認畫面">
+                                <div class="fig-caption">圖5：新增後資料列表確認畫面（姓名已遮蔽）</div>
+                            </div>
                         </div>
                     </div>
                 </td>
             </tr>
         </table>
-
         <!-- 規範注意事項 -->
         <div class="notice-box">
             <h3>依據規範注意事項：</h3>
             <ul>
-                <li><strong>日常刷卡控管：</strong>當日有班且因公提早到班已刷卡者，下班後無須再刷卡；但若是<strong>因公延遲下班，則務必進行下班刷卡</strong>，以維護簽核記錄比對基準[cite: 1]。</li>
-                <li><strong>月總時數上限：</strong>醫師每月<strong>「臨時加班」+「假日加班」</strong>之申報時數，<strong>兩者合併計算上限為 36 小時</strong>[cite: 1]。</li>
-                <li><strong>跨院區資料異常：</strong>若跨院區刷卡資料因目前程式修正中而未顯示，請先依據實際出勤狀況<strong>自行手動輸入</strong>起訖時間申報[cite: 1]。</li>
+                <li><strong>日常刷卡控管：</strong>當日有班且因公提早到班已刷卡者，下班後無須再刷卡；但若是<strong>因公延遲下班，則務必進行下班刷卡</strong>，以維護簽核記錄比對基準。</li>
+                <li><strong>月總時數上限：</strong>醫師每月<strong>「臨時加班」+「假日加班」</strong>之申報時數，<strong>兩者合併計算上限為 36 小時</strong>。</li>
+                <li><strong>跨院區資料異常：</strong>若跨院區刷卡資料因目前程式修正中而未顯示，請先依據實際出勤狀況<strong>自行手動輸入</strong>起訖時間申報。</li>
             </ul>
+            <div class="fig-box">
+                <img src="Figure/圖6.png" alt="補充說明畫面">
+                <div class="fig-caption">圖6：規範注意事項補充參考畫面</div>
+            </div>
         </div>
     </div>
 </div>
-
-</body>
-</html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>說明 - 加班申報方式</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        h1 {
-            color: #0056b3;
-            border-bottom: 2px solid #0056b3;
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-size: 28px;
-            text-align: center;
-        }
-        h2 {
-            color: #2c3e50;
-            margin-top: 30px;
-            border-left: 5px solid #0056b3;
-            padding-left: 10px;
-            font-size: 20px;
-        }
-        .qa-section {
-            background-color: #f1f3f5;
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 25px;
-        }
-        .qa-item {
-            margin-bottom: 20px;
-        }
-        .qa-item:last-child {
-            margin-bottom: 0;
-        }
-        .question {
-            font-weight: bold;
-            color: #d9534f;
-            font-size: 16px;
-            margin-bottom: 5px;
-        }
-        .answer {
-            color: #2c3e50;
-            padding-left: 15px;
-            border-left: 2px solid #ced4da;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-            background-color: #fff;
-        }
-        th, td {
-            border: 1px solid #dee2e6;
-            padding: 12px;
-            text-align: center;
-        }
-        th {
-            background-color: #e9ecef;
-            color: #495057;
-            font-weight: bold;
-        }
-        .highlight-box {
-            background-color: #fff3cd;
-            border: 1px solid #ffeeba;
-            color: #856404;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .steps-list {
-            padding-left: 20px;
-        }
-        .steps-list li {
-            margin-bottom: 10px;
-        }
-        .sys-path {
-            background-color: #e2e3e5;
-            padding: 10px 15px;
-            border-radius: 4px;
-            font-family: monospace;
-            font-size: 14px;
-            color: #383d41;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>醫師加班申報說明</h1>
-
-    <!-- Q&A Section -->
-    <h2>常見問答 (Q&A)</h2>
-    <div class="qa-section">
-        <div class="qa-item">
-            <div class="question">Q1: 當日有班，因公提早到班有刷卡，下班後還需要刷卡？</div>
-            <div class="answer">A: 不用[cite: 1]。</div>
-        </div>
-        <div class="qa-item">
-            <div class="question">Q2: 續上題，那因公延遲下班，要刷嗎？</div>
-            <div class="answer">A: 要[cite: 1]。</div>
-        </div>
-        <div class="qa-item">
-            <div class="question">Q3: 何時要入臨時加班，何時要入假日加班？</div>
-            <div class="answer">
-                1. 因急診為輪班部門，有排班的日子算平日，故因公提早或延遲下班，均為加班代號2<strong>【臨時加班】</strong>[cite: 1]。<br>
-                2. 未排班的日子為假日，故出勤即為加班代號1<strong>【假日加班】</strong>[cite: 1]。
-            </div>
-        </div>
-        <div class="qa-item">
-            <div class="question">Q4: 臨時及假日加班的時數上限為何？</div>
-            <div class="answer">
-                平日加班每日最多 4 小時（可自報說明如下表）；假日加班每日最多 8 小時[cite: 1]。
-                <table>
-                    <thead>
-                        <tr>
-                            <th>加班類型</th>
-                            <th>急診值班情況</th>
-                            <th>可自報上限（小時）</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td rowspan="2"><strong>臨時加班</strong>[cite: 1]</td>
-                            <td>報班 10 小時班，自動報 2 小時加班[cite: 1]</td>
-                            <td>2[cite: 1]</td>
-                        </tr>
-                        <tr>
-                            <td>報班 12 小時班，自動報 4 小時加班[cite: 1]</td>
-                            <td>0[cite: 1]</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="qa-item">
-            <div class="question">Q5: 跨院區刷卡資料未顯示？</div>
-            <div class="answer">A: 已反應，程式修正中。請先自行輸入[cite: 1]。</div>
-        </div>
-    </div>
-
-    <!-- System Navigation -->
-    <h2>系統操作路徑</h2>
-    <div class="sys-path">
-        長庚HIS → 全院性作業 → 醫師相關作業 → 主治醫師加班資料[cite: 1]
-    </div>
-
-    <!-- Operation Steps -->
-    <h2>申報步驟指引</h2>
-    <ol class="steps-list">
-        <li>進入系統後，選擇對應的考勤月份、院區及部門[cite: 1]。</li>
-        <li>點選<strong>「加班日期」</strong>並挑選加班起迄日期與起迄時間[cite: 1]。</li>
-        <li>選擇<strong>「加班代號」</strong>（例如：1.假日加班 或 2.臨時加班）[cite: 1]。</li>
-        <li>選擇<strong>「原因」</strong>（如：門診逾時、夜診逾時、查房、開刀逾時、處理病患病情、教育訓練、醫療會議等），若選「其他」請於內容欄詳細說明理由[cite: 1]。</li>
-        <li>輸入完成後按<strong>「新增」</strong>[cite: 1]。</li>
-        <li><strong>確認申報：</strong>資料列表必須成功顯示出您的名字，才算完成申報流程[cite: 1]。</li>
-    </ol>
-
-    <!-- Important Notice -->
-    <div class="highlight-box">
-        ※ 申請假日加班者，請根據加班實際刷卡記錄，以 HIS 加班系統新增加班記錄後，依申報流程進行核簽[cite: 1]。<br>
-        ※ 臨時加班 + 假日加班，每月總上限為 36 小時[cite: 1]。
-    </div>
-</div>
-
 </body>
 </html>
