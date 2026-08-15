@@ -16,6 +16,7 @@
     --teal-deep:#204B42;
     --clay:#BE7439;
     --pulse:#A63A2E;
+    --plum:#6B4A7A;
     --line:rgba(24,39,34,0.14);
     --serif:'Noto Serif TC', serif;
     --sans:'Noto Sans TC', sans-serif;
@@ -54,12 +55,12 @@
     0%,100%{box-shadow:0 0 0 0 rgba(166,58,46,0.45);}
     45%{box-shadow:0 0 0 7px rgba(166,58,46,0);}
   }
-  nav.links{display:flex;gap:22px;font-family:var(--mono);font-size:0.78rem;letter-spacing:0.03em;}
+  nav.links{display:flex;gap:18px;font-family:var(--mono);font-size:0.76rem;letter-spacing:0.03em;flex-wrap:wrap;}
   nav.links a{text-decoration:none;color:var(--ink);opacity:0.65;position:relative;padding-bottom:2px;transition:opacity .2s;}
   nav.links a:hover{opacity:1;}
   nav.links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--pulse);transition:width .25s;}
   nav.links a:hover::after{width:100%;}
-  @media (max-width:760px){ nav.links{display:none;} }
+  @media (max-width:860px){ nav.links{display:none;} }
   .ecg{width:100%;display:block;height:56px;}
   .ecg path{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;}
   .hero{padding:86px 0 10px;}
@@ -92,6 +93,7 @@
   section.card-section.alt{background:var(--paper-2);}
   section.card-section.acls{background:#EFE2DC;border-top:1px solid rgba(166,58,46,0.25);border-bottom:1px solid rgba(166,58,46,0.25);}
   section.card-section.overtime{background:#E7ECE3;border-top:1px solid rgba(47,111,98,0.25);border-bottom:1px solid rgba(47,111,98,0.25);}
+  section.card-section.friends{background:#EBE4EF;border-top:1px solid rgba(107,74,122,0.28);border-bottom:1px solid rgba(107,74,122,0.28);}
   .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:34px;flex-wrap:wrap;}
   .sec-tag{font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.55;}
   .sec-title{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);margin:6px 0 0;}
@@ -120,6 +122,8 @@
   .cta.ink:hover{background:transparent;color:var(--ink);}
   .cta.pulse{background:var(--pulse);color:var(--paper);border-color:var(--pulse);}
   .cta.pulse:hover{background:transparent;color:var(--pulse);}
+  .cta.plum{background:var(--plum);color:var(--paper);border-color:var(--plum);}
+  .cta.plum:hover{background:transparent;color:var(--plum);}
   .cta .arrow{transition:transform .25s;}
   .cta:hover .arrow{transform:translateX(4px);}
   .sample{
@@ -165,6 +169,7 @@
       <a href="#reflect">03 課後</a>
       <a href="#stories">04 診間</a>
       <a href="#overtime">05 加班</a>
+      <a href="#friends">06 聚會</a>
     </nav>
   </div>
 </header>
@@ -174,10 +179,10 @@
     <h1 class="title">看診三十年，<br>教學與說故事，<em>是同一種聽診。</em></h1>
     <p class="lede">
       陳醫師在急診室與內視鏡室之間度過了大半職涯，也把同樣的臨床邏輯，
-      帶進了大學課堂與診間衛教。這裡整理了他的六個園地——
-      ACLS 急救教學、執業生涯、課前提問、課後反思、診間故事、加班刷卡原則——邀請你從任何一個入口進來。
+      帶進了大學課堂與診間衛教。這裡整理了他的七個園地——
+      ACLS 急救教學、執業生涯、課前提問、課後反思、診間故事、加班刷卡原則、好友聚會記錄——邀請你從任何一個入口進來。
     </p>
-    <p class="lede-small">六個獨立網站，一種思考方式：先問對問題，答案才會靠近你。</p>
+    <p class="lede-small">七個獨立網站，一種思考方式：先問對問題，答案才會靠近你。</p>
     <div class="chart-id">
       <span>PATIENT&nbsp;ID&nbsp;/ 陳0明醫師</span>
       <span>SPECIALTY&nbsp;/ 急診・重症・消化系・高壓氧</span>
@@ -447,9 +452,47 @@
   </div>
   <svg class="ecg" viewBox="0 0 1200 56" preserveAspectRatio="none"><path stroke="#2F6F62" opacity="0.55"/></svg>
 </section>
+<!-- ================= 06 FRIENDS ================= -->
+<section class="card-section friends" id="friends">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">06 · Personal Log</div>
+        <h2 class="sec-title">好友聚會記錄</h2>
+      </div>
+      <div class="sec-num">FriendMeetingRecord</div>
+    </div>
+    <div class="panel">
+      <div class="panel-text">
+        <p>行醫與教學之外，也留一塊園地給生活裡最放鬆的時刻——
+        和老友相聚的每一次紀錄。這裡整理了聚會的時間、地點、
+        參與的朋友，以及當下值得記下的片刻，
+        是六個臨床與教學園地之外，最私人的一份存檔。</p>
+        <div class="tag-row">
+          <span class="tag">聚會時間軸</span>
+          <span class="tag">友人紀錄</span>
+          <span class="tag">生活片刻</span>
+        </div>
+        <a class="cta plum" href="https://d8600010-crypto.github.io/FriendMeetingRecord/" target="_blank" rel="noopener">
+          進入好友聚會記錄 <span class="arrow">→</span>
+        </a>
+      </div>
+      <div class="sample">
+        <div class="sk">PERSONAL ARCHIVE</div>
+        <h4>忙碌之餘的另一種紀錄</h4>
+        <ul>
+          <li>每一次聚會的時間與地點</li>
+          <li>當下的對話與心情筆記</li>
+          <li>與老友之間累積的共同記憶</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <svg class="ecg" viewBox="0 0 1200 56" preserveAspectRatio="none"><path stroke="#6B4A7A" opacity="0.55"/></svg>
+</section>
 <footer>
   <div class="wrap">
-    <h3 class="foot-title">一位醫師，六種心跳，同一份耐心。</h3>
+    <h3 class="foot-title">一位醫師，七種心跳，同一份耐心。</h3>
     <p>執業、教學、寫作，出發點始終一樣：先聽懂問題，再談答案。
     以上內容僅供醫學教育與衛教參考，不能取代專業醫療診斷與建議。</p>
     <div class="foot-grid">
@@ -477,6 +520,10 @@
         <h5>05 加班</h5>
         <a href="https://d8600010-gmail.github.io/JimmyWholePage/OvertimeChockIn/OverTimeRule.html" target="_blank" rel="noopener">加班刷卡原則 ↗</a>
         <a href="https://d8600010-gmail.github.io/JimmyWholePage/OvertimeChockIn/OverTimeFlow.html" target="_blank" rel="noopener">刷卡流程圖 ↗</a>
+      </div>
+      <div class="foot-col">
+        <h5>06 聚會</h5>
+        <a href="https://d8600010-crypto.github.io/FriendMeetingRecord/" target="_blank" rel="noopener">好友聚會記錄 ↗</a>
       </div>
     </div>
     <div class="fine">© 2026 Dr. Jimmy Chen · Integrated Portal · Content for medical education purposes only</div>
