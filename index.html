@@ -94,6 +94,7 @@
   section.card-section.acls{background:#EFE2DC;border-top:1px solid rgba(166,58,46,0.25);border-bottom:1px solid rgba(166,58,46,0.25);}
   section.card-section.overtime{background:#E7ECE3;border-top:1px solid rgba(47,111,98,0.25);border-bottom:1px solid rgba(47,111,98,0.25);}
   section.card-section.friends{background:#EBE4EF;border-top:1px solid rgba(107,74,122,0.28);border-bottom:1px solid rgba(107,74,122,0.28);}
+  section.card-section.book{background:#E4EAEC;border-top:1px solid rgba(47,90,111,0.28);border-bottom:1px solid rgba(47,90,111,0.28);}
   .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:34px;flex-wrap:wrap;}
   .sec-tag{font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;opacity:0.55;}
   .sec-title{font-family:var(--serif);font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);margin:6px 0 0;}
@@ -124,6 +125,8 @@
   .cta.pulse:hover{background:transparent;color:var(--pulse);}
   .cta.plum{background:var(--plum);color:var(--paper);border-color:var(--plum);}
   .cta.plum:hover{background:transparent;color:var(--plum);}
+  .cta.book{background:#2F5A6F;color:var(--paper);border-color:#2F5A6F;}
+  .cta.book:hover{background:transparent;color:#2F5A6F;}
   .cta .arrow{transition:transform .25s;}
   .cta:hover .arrow{transform:translateX(4px);}
   .sample{
@@ -200,6 +203,7 @@
       <a href="#stories">04 診間</a>
       <a href="#overtime">05 加班</a>
       <a href="#friends">06 聚會</a>
+      <a href="#book">07 我的書</a>
     </nav>
   </div>
 </header>
@@ -209,10 +213,10 @@
     <h1 class="title">看診三十年，<br>教學與說故事，<em>是同一種聽診。</em></h1>
     <p class="lede">
       陳醫師在急診室與內視鏡室之間度過了大半職涯，也把同樣的臨床邏輯，
-      帶進了大學課堂與診間衛教。這裡整理了他的七個園地——
-      ACLS 急救教學、執業生涯、課前提問、課後反思、診間故事、加班刷卡原則、好友聚會記錄——邀請你從任何一個入口進來。
+      帶進了大學課堂與診間衛教。這裡整理了他的八個園地——
+      ACLS 急救教學、執業生涯、課前提問、課後反思、診間故事、加班刷卡原則、好友聚會記錄、我的書——邀請你從任何一個入口進來。
     </p>
-    <p class="lede-small">七個獨立網站，一種思考方式：先問對問題，答案才會靠近你。</p>
+    <p class="lede-small">八個獨立網站，一種思考方式：先問對問題，答案才會靠近你。</p>
     <div class="chart-id">
       <span>PATIENT&nbsp;ID&nbsp;/ 陳0明醫師</span>
       <span>SPECIALTY&nbsp;/ 急診・重症・消化系・高壓氧</span>
@@ -520,9 +524,47 @@
   </div>
   <svg class="ecg" viewBox="0 0 1200 56" preserveAspectRatio="none"><path stroke="#6B4A7A" opacity="0.55"/></svg>
 </section>
+<!-- ================= 07 MY BOOK ================= -->
+<section class="card-section book" id="book">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="sec-tag">07 · My Book</div>
+        <h2 class="sec-title">我的書</h2>
+      </div>
+      <div class="sec-num">MyBook</div>
+    </div>
+    <div class="panel">
+      <div class="panel-text">
+        <p>行醫、教學、聚會之外，還有一份沉澱下來的文字——
+        把三十年來在急診室、內視鏡室與診間裡看見的生死與人情，
+        整理成一本書。這裡收錄了書中的章節摘要、寫作緣由，
+        以及陳醫師想透過文字留下的一些提醒。</p>
+        <div class="tag-row">
+          <span class="tag">章節摘要</span>
+          <span class="tag">寫作緣由</span>
+          <span class="tag">生死與人情</span>
+        </div>
+        <a class="cta book" href="https://d8600010-crypto.github.io/MyBook/" target="_blank" rel="noopener">
+          進入我的書 <span class="arrow">→</span>
+        </a>
+      </div>
+      <div class="sample">
+        <div class="sk">THE BOOK</div>
+        <h4>把行醫路上的觀察，寫成一本書</h4>
+        <ul>
+          <li>診間與急診現場的真實片段</li>
+          <li>從臨床走向文字的心路歷程</li>
+          <li>寫給讀者的，關於生命的提醒</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <svg class="ecg" viewBox="0 0 1200 56" preserveAspectRatio="none"><path stroke="#2F5A6F" opacity="0.55"/></svg>
+</section>
 <footer>
   <div class="wrap">
-    <h3 class="foot-title">一位醫師，七種心跳，同一份耐心。</h3>
+    <h3 class="foot-title">一位醫師，八種心跳，同一份耐心。</h3>
     <p>執業、教學、寫作，出發點始終一樣：先聽懂問題，再談答案。
     以上內容僅供醫學教育與衛教參考，不能取代專業醫療診斷與建議。</p>
     <div class="foot-grid">
@@ -554,6 +596,10 @@
       <div class="foot-col">
         <h5>06 聚會</h5>
         <a href="https://d8600010-crypto.github.io/FriendMeetingRecord/" target="_blank" rel="noopener">好友聚會記錄 ↗</a>
+      </div>
+      <div class="foot-col">
+        <h5>07 我的書</h5>
+        <a href="https://d8600010-crypto.github.io/MyBook/" target="_blank" rel="noopener">我的書 ↗</a>
       </div>
     </div>
     <div class="fine">© 2026 Dr. Jimmy Chen · Integrated Portal · Content for medical education purposes only</div>
